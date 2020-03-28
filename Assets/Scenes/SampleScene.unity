@@ -356,7 +356,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 4
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: 1369025946}
   - component: {fileID: 1369025945}
   - component: {fileID: 1369025947}
+  - component: {fileID: 1369025948}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -506,6 +507,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &1369025948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369025944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f370ea7f1e7681b46b4eb3598bd2646f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1481183685
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +536,7 @@ GameObject:
   - component: {fileID: 1481183688}
   - component: {fileID: 1481183692}
   - component: {fileID: 1481183693}
+  - component: {fileID: 1481183694}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -721,9 +735,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481183685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00229ff7945e96a42847fef0ef943f0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ecdbaf31f255f442b72f36ce1ce21cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &1481183694
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481183685}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0017873049}
+  serializedVersion: 2
+  m_Radius: 0.394925
 --- !u!61 &1481183695
 BoxCollider2D:
   m_ObjectHideFlags: 0
