@@ -20,15 +20,14 @@ public class EnemyController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.tag == "Player")
         {
-            PlayerController player = col.gameObject.GetComponent<PlayerController>();
+            PlayerCombat player = col.gameObject.GetComponent<PlayerCombat>();
             float attackTime = Random.Range(0.5f, 1.5f);
             StartCoroutine(AttackCoroutine(attackTime, player));
         }
     }
 
-    IEnumerator AttackCoroutine(float timeToWait, PlayerController player)
+    IEnumerator AttackCoroutine(float timeToWait, PlayerCombat player)
     {
         yield return new WaitForSeconds(timeToWait);
         player.Death();
@@ -45,6 +44,7 @@ public class EnemyController : MonoBehaviour
 
     public void Death()
     {
+        GetComponent<Collider2D>().enabled = false;
         Destroy(this.gameObject);
         Debug.Log("Enemy dead");
     }
