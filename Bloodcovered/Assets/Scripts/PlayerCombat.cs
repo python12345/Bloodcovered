@@ -11,7 +11,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
-    public float attackRate = 2f;
+    public float attackRate = 6f;
     float nextAttackTime = 0f;
 
     // Update is called once per frame
@@ -19,10 +19,10 @@ public class PlayerCombat : MonoBehaviour
     {
         if(Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Attack();
-                nextAttackTime = Time.time + 2f / attackRate;
+                nextAttackTime = Time.time + 1f / attackRate;
             }
         }
 
@@ -46,7 +46,8 @@ public class PlayerCombat : MonoBehaviour
             //Debug.Log("hit enemy " + enemy.name);
             //Debug.Log(enemy.col);
             enemy.GetComponent<EnemyController>().Death();
-            animator.SetInteger("Hit", +1);
+            animator.SetInteger("Hit", animator.GetInteger("Hit") + 1);
+            Debug.Log("shes a maniac maniac oh no no");
         }
 
     }
