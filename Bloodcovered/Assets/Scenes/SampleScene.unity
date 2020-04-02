@@ -200,7 +200,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
   orientation: 1
-  enableRotation: 1
+  enableRotation: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
@@ -821,7 +821,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
   orientation: 1
-  enableRotation: 1
+  enableRotation: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
@@ -981,7 +981,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152981051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.87, z: 0}
+  m_LocalPosition: {x: 1.44, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965984287}
@@ -1573,6 +1573,7 @@ MonoBehaviour:
   rb: {fileID: 1965984290}
   cam: {fileID: 519420031}
   animator: {fileID: 1965984288}
+  charRotationOffset: 90
 --- !u!50 &1965984290
 Rigidbody2D:
   serializedVersion: 4
@@ -1850,6 +1851,7 @@ MonoBehaviour:
   rb: {fileID: 2811191381229092095}
   cam: {fileID: 519420031}
   animator: {fileID: 2811191381229091970}
+  charRotationOffset: 90
 --- !u!50 &2811191381229092095
 Rigidbody2D:
   serializedVersion: 4

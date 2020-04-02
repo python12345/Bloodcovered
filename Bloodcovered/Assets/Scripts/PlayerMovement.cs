@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
 
+    public float charRotationOffset = 90;
+
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +39,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        rb.rotation = angle + charRotationOffset;
     }
 }
